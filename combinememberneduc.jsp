@@ -18,7 +18,7 @@ String placeofwork = request.getParameter("placeofwork");
 
 try {
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/finalchurch1", "root", "Sweetmom1844.");
+	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/finalchurch1", "root", "");
 	Statement st=conn.createStatement();
 	int i=st.executeUpdate("insert into generalmembership(firstname,middlename,surname,gender,dateofbirth,maritalstatus,churchfamily,placeofresidence,highestlevelofeducation,profession,occupation,placeofwork)values ('"+firstname+"','"+middlename+"','"+surname+"','"+gender+"', '"+dateofbirth+"', '"+maritalstatus+"','"+churchfamily+"','"+placeofresidence+"','"+highestlevelofeducation+"','"+profession+"','"+occupation+"','"+placeofwork+"')");
 	out.println("Thanks for registering!");
