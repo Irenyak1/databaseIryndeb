@@ -16,7 +16,7 @@ String placeofresidence= request.getParameter("placeofresidence");
 
 try {
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/finalchurch1", "root", "Sweetmom1844.");
+	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/finalchurch1", "root", "");
 	Statement st=conn.createStatement();
 	int i=st.executeUpdate("insert into childrensection(firstname,middlename,surname,gender,dateofbirth,fathersname,mothersname,churchfamilyyoubelongto,placeofresidence)values ('"+firstname+"','"+middlename+"','"+surname+"','"+gender+"', '"+dateofbirth+"', '"+fathersname+"','"+mothersname+"','"+churchfamilyyoubelongto+"','"+placeofresidence+"')");
 	out.println("Thanks for registering!");
