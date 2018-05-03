@@ -11,7 +11,7 @@ String assistant = request.getParameter("assistant");
 
 try {
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/finalchurch1", "root", "Sweetmom1844.");
+	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/finalchurch1", "root", "");
 	Statement st=conn.createStatement();
 	int i=st.executeUpdate("insert into churchdepartments(nameofdepartment,elderincharge,headofdepartment,assistant)values ('"+nameofdepartment+"','"+elderincharge+"','"+headofdepartment+"','"+assistant+"')");
 	out.println("Welcome departmental!");
