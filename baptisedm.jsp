@@ -15,7 +15,7 @@ String formerreligion= request.getParameter("formerreligion");
 
 try {
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/finalchurch1", "root", "Sweetmom1844.");
+	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/finalchurch1", "root", "");
 	Statement st=conn.createStatement();
 	int i=st.executeUpdate("insert into baptisedmembers(firstname,middlename,surname,gender,nameofpastorwhobaptised,dateofbaptism,placeofbaptism,formerreligion)values ('"+firstname+"','"+middlename+"','"+surname+"','"+gender+"','"+nameofpastorwhobaptised+"', '"+dateofbaptism+"', '"+placeofbaptism+"','"+formerreligion+"')");
 	out.println("Thanks for getting baptized!");
