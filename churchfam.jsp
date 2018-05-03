@@ -10,7 +10,7 @@ String familyhead = request.getParameter("familyhead");
 
 try {
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/finalchurch1", "root", "Sweetmom1844.");
+	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/finalchurch1", "root", "");
 	Statement st=conn.createStatement();
 	int i=st.executeUpdate("insert into churchfamily(churchfamilyname,elderinchargeoffamily,familyhead)values ('"+churchfamilyname+"','"+elderinchargeoffamily+"','"+familyhead+"')");
 	out.println("Welcome family member!");
